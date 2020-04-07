@@ -24,9 +24,10 @@ return gulp.src('./scss/**/*.scss')
 }
 
 function watch() { browserSync.init({
-server: {
-baseDir: './' }
-});
+  browser: "firefox",
+  server: {
+    baseDir: './' }
+  });
 gulp.watch('./scss/**/*.scss', {ignoreInitial: false}, style);
 gulp.watch('./*.html').on('change', browserSync.reload);
 gulp.watch('./js/**/*.js').on('change', browserSync.reload);

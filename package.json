@@ -1,25 +1,29 @@
 {
-  "name": "web VR",
+  "name": "webVR",
   "version": "1.0.0",
-  "description": "Web VR test",
+  "description": "My A-Frame VR site",
   "main": "gulpfile.js",
   "directories": {
     "doc": "doc"
   },
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dandrewbarlow/webVR.git"
+  },
   "keywords": [],
-  "author": "Andrew Barlow",
+  "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "aos": "^2.3.4",
-    "autoprefixer": "^9.7.4",
-    "browser-sync": "^2.26.7",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemap": "^1.0.1",
-    "gulp-sourcemaps": "^2.6.5"
-  }
+  "bugs": {
+    "url": "https://github.com/dandrewbarlow/webVR/issues"
+  },
+  "homepage": "https://github.com/dandrewbarlow/webVR#readme"
 }
