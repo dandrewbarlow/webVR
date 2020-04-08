@@ -17,6 +17,9 @@
   <!-- AFRAME script -->
   <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
 
+  <!-- Borrowed star system background-->
+  <script src="https://cdn.rawgit.com/matthewbryancurtis/aframe-star-system-component/db4f1030/index.js"></script>
+
   <meta name="theme-color" content="#fafafa">
 </head>
 
@@ -39,26 +42,64 @@
      <a-asset-item id="venus" src="/assets/venus.glb"></a-asset-item>
      <a-asset-item id="earth" src="/assets/earth.glb"></a-asset-item>
      <a-asset-item id="moon" src="/assets/moon.glb"></a-asset-item>
+     <a-asset-item id="mars" src="/assets/mars.glb"></a-asset-item>
+     <a-asset-item id="jupiter" src="/assets/jupiter.glb"></a-asset-item>
+     <a-asset-item id="saturn" src="/assets/saturn.glb"></a-asset-item>
+     <a-asset-item id="uranus" src="/assets/uranus.glb"></a-asset-item>
+     <a-asset-item id="neptune" src="/assets/neptune.glb"></a-asset-item>
+     <a-asset-item id="pluto" src="/assets/pluto.glb"></a-asset-item>
 
    </a-assets>
 
-    <!-- <a-entity camera look-controls position="0 100 0"></a-entity> -->
+    <a-entity camera look-controls fov="120" position="0 0 10" animation="property: position; to: 0 0 0; dur: 20000; easing: easeInOutCubic; loop: true"></a-entity>
 
-    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; easing: linear; duration: 1000">
-      <a-entity gltf-model="#sun" position="0 0 -100" scale=".05 .05 .05"></a-entity>
+  <a-entity scale=".01 .01 .01">
+    <!-- SUN -->
+    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; easing: linear; dur: 1000;">
+      <a-entity gltf-model="#sun" position="0 0 -100" scale=".0865 .0865 .0865"></a-entity>
     </a-entity>
-    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; easing: linear; duration: 88">
-      <a-entity gltf-model="#mercury" position="0 50 -100" scale=".01 .01 .01"></a-entity>
+    <!-- MERCURY -->
+    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; easing: linear; dur: 88;">
+      <a-entity gltf-model="#mercury" position="0 57.9 -100" scale=".004879 .004879 .004879"></a-entity>
     </a-entity>
-    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; easing: linear; duration: 224">
-      <a-entity gltf-model="#venus" position="0 75 -100" scale=".01 .01 .01"></a-entity>
+    <!-- VENUS -->
+    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; easing: linear; dur: 224;">
+      <a-entity gltf-model="#venus" position="0 108.2 -100" scale=".012104 .012104 .012104"></a-entity>
     </a-entity>
-    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; easing: linear; duration: 365">
-      <a-entity gltf-model="#earth" position="0 100 -100" scale=".01 .01 .01"></a-entity>
+    <!-- EARTH -->
+    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; easing: linear; dur: 365">
+      <a-entity gltf-model="#earth" position="0 149.6 -100" scale=".012756 .012756 .012756"></a-entity>
+    </a-entity>
+    <!-- MARS -->
+    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; easing: linear; dur: 687">
+      <a-entity gltf-model="#mars" position="0 227.9 -100" scale=".006792 .006792 .006792"></a-entity>
+    </a-entity>
+    <!-- JUPITER -->
+    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; easing: linear; dur: 4331">
+      <a-entity gltf-model="#jupiter" position="0 778.6 -100" scale=".0142984 .0142984 .0142984"></a-entity>
+    </a-entity>
+    <!-- SATURN -->
+    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; easing: linear; dur: 10747">
+      <a-entity gltf-model="#saturn" position="0 1433.5 -100" scale=".0120536 .0120536 .0120536"></a-entity>
+    </a-entity>
+    <!-- URANUS -->
+    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; easing: linear; dur: 30589">
+      <a-entity gltf-model="#uranus" position="0 2872.5 -100" scale=".0051118 .0051118 .0051118"></a-entity>
+    </a-entity>
+    <!-- NEPTUNE -->
+    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; easing: linear; dur: 59800">
+      <a-entity gltf-model="#neptune" position="0 4495.1 -100" scale=".0049528 .049528 .049528"></a-entity>
+    </a-entity>
+    <!-- PLUTO -->
+    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 0 360; loop: true; easing: linear; dur: 90560">
+      <a-entity gltf-model="#pluto" position="0 5906.4 -100" scale=".000237 .000237 .000237"></a-entity>
+    </a-entity>
+
     </a-entity>
 
     <a-light type="ambient" position="0 0 -100" color="#ffffff"></a-light>
-    <a-sky color="#16002b"></a-sky>
+    <a-sky color="black"></a-sky>
+    <a-entity star-system></a-entity>
 </a-scene>
 
 
