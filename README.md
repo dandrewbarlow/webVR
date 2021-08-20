@@ -1,4 +1,8 @@
 # Web VR
+
+## NOTE: Archiving this repo
+It's old and dependencies need frequent security updates. Please make sure to update if using this code.
+
 My custom A-Frame Website: a VR solar system
 ### [Check it out!](https://creative.colorado.edu/~daba3662/dev/projects/webVR/)
 ### Assets
